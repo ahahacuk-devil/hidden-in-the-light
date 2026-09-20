@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://btn1vse2w5gug"]
+
+[ext_resource type="Script" uid="uid://70wavd04jfrd" path="res://teleport.gd" id="1_106vg"]
+
+[node name="teleport" type="Area2D" unique_id=1192647268]
+collision_layer = 2
+script = ExtResource("1_106vg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

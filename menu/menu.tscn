@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cwlsh4gnus3nt"]
+
+[ext_resource type="Script" uid="uid://buj07c4r1wxyu" path="res://menu/menu.gd" id="1_j0t7f"]
+[ext_resource type="PackedScene" uid="uid://drlcg85tmijrb" path="res://bg/bg.tscn" id="2_g18jx"]
+[ext_resource type="Theme" uid="uid://bcdaibmvlcrvg" path="res://new_theme.tres" id="2_svuvw"]
+[ext_resource type="PackedScene" uid="uid://bkmhewugdyc3i" path="res://bird/bird1.tscn" id="3_6nwqt"]
+[ext_resource type="Texture2D" uid="uid://chlnd0wc1mii4" path="res://Sprite-00017.png" id="3_juveg"]
+[ext_resource type="PackedScene" uid="uid://vxogrdw7ub1l" path="res://dialogic/dialogicABSOLUTE.tscn" id="6_juveg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v6yed"]
+texture = ExtResource("3_juveg")
+region_rect = Rect2(27.266006, 47.48587, 84.43717, 35.36802)
+
+[node name="menu" type="CanvasLayer" unique_id=399667427]
+script = ExtResource("1_j0t7f")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1878111702]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -79.0
+offset_right = 157.0
+offset_bottom = 79.0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1906272091]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=181491677]
+layout_mode = 2
+theme = ExtResource("2_svuvw")
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxTexture_v6yed")
+text = "ИГРАТЬ"
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1387617219]
+layout_mode = 2
+theme = ExtResource("2_svuvw")
+theme_override_font_sizes/font_size = 47
+text = "УХОДИ"
+
+[node name="BG" parent="." unique_id=449076953 instance=ExtResource("2_g18jx")]
+
+[node name="bird" parent="." unique_id=989714157 instance=ExtResource("3_6nwqt")]
+
+[node name="dialogic" parent="." unique_id=1768872819 instance=ExtResource("6_juveg")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_play_2_pressed"]

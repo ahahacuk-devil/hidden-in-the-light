@@ -1,0 +1,42 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "New_File",
+"suffix": ""
+},
+&"default_portrait": "MIA",
+&"description": "",
+&"display_name": "Мия",
+&"mirror": false,
+&"nicknames": ["Мия"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"MIA": {
+"export_overrides": {
+"image": "\"res://scenes/mia.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(1, 1),
+"scale": 1,
+"scene": "",
+"sound_mood": "Mood 1"
+},
+"mia-scared": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

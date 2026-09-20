@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://c5m0qccr62qst"]
+
+[ext_resource type="Script" uid="uid://5oxw2mxs14qa" path="res://bird/bird_1.gd" id="1_qlr2y"]
+[ext_resource type="Texture2D" uid="uid://cw1owrbak1t4f" path="res://bg/BirdSpriteBig.png" id="2_ot1l3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06mn0"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(0, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lbg1"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(160, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbv4e"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(320, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqwx4"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(480, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxcuc"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(640, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuwpv"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(800, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3t58"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(960, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bve62"]
+atlas = ExtResource("2_ot1l3")
+region = Rect2(1120, 160, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5h5ij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06mn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lbg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbv4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqwx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxcuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuwpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3t58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bve62")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bird" type="ParallaxBackground" unique_id=989714157]
+script = ExtResource("1_qlr2y")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=770480158]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxLayer" unique_id=102293119]
+position = Vector2(1723.875, 319.87494)
+scale = Vector2(0.26406157, 0.26406157)
+sprite_frames = SubResource("SpriteFrames_5h5ij")
+autoplay = "default"
+frame_progress = 0.14849283
+flip_h = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." unique_id=388176782]
+motion_scale = Vector2(2.5, 1)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ParallaxLayer2" unique_id=1839413486]
+position = Vector2(-21.601532, 99.398476)
+scale = Vector2(0.3075192, 0.3075192)
+sprite_frames = SubResource("SpriteFrames_5h5ij")
+autoplay = "default"
+frame_progress = 0.41793752
+flip_h = true

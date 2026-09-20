@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://bcdaibmvlcrvg"]
+
+[ext_resource type="Texture2D" uid="uid://chlnd0wc1mii4" path="res://Sprite-00017.png" id="1_amlv4"]
+[ext_resource type="Texture2D" uid="uid://bvhcn3geytea4" path="res://Sprite-0001711.png" id="1_i7eh4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_78ylj"]
+texture = ExtResource("1_i7eh4")
+region_rect = Rect2(26.719719, 47.272163, 85.07443, 35.686653)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svuvw"]
+texture = ExtResource("1_amlv4")
+region_rect = Rect2(26.719719, 46.953533, 85.07443, 36.005283)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7eh4"]
+texture = ExtResource("1_i7eh4")
+region_rect = Rect2(27.675613, 46.953533, 84.11854, 35.049397)
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxTexture_78ylj")
+Button/styles/normal = SubResource("StyleBoxTexture_svuvw")
+Button/styles/pressed = SubResource("StyleBoxTexture_i7eh4")

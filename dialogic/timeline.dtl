@@ -1,0 +1,8 @@
+[background arg="res://dialogic/798e6999f2b0d875f8d9526f65be426b.jpg" fade="0.0"]
+character1: «Ровно неделю назад, в четверг, в лесном массиве к западу от города были обнаружены тела супругов Миллер - Роберта и Лизы»
+character1: «Обстоятельства смерти до сих пор официально не раскрыты»
+[voice path="res://addons/dialogic/Example Assets/sound-effects/typing3.wav" volume="0.30000000000000004"]
+character1: «Полиция ограничивается формулировкой "сердечный приступ"»
+character1: «Однако, как вы помните, у обоих супругов не было хронических заболеваний сердца»
+[voice path="res://addons/dialogic/Example Assets/sound-effects/typing3.wav" volume="0.2"]
+[signal arg="exit_tele"]

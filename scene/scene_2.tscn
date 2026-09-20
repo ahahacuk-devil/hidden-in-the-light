@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://64w74tn7480y"]
+
+[ext_resource type="PackedScene" uid="uid://bqcnc63t42elu" path="res://dialogueArea/dialogue_area_2d.tscn" id="1_nev6h"]
+[ext_resource type="PackedScene" uid="uid://ygh52ue7aoqo" path="res://textBOx/Dialogue_system.tscn" id="1_tf1jc"]
+[ext_resource type="Script" uid="uid://cdchxnouyvvss" path="res://DialogueExportResource.gd" id="2_tf1jc"]
+[ext_resource type="Script" uid="uid://c55w66ctnstua" path="res://DialogueTextResourse.gd" id="3_tx87k"]
+
+[sub_resource type="Resource" id="Resource_nev6h"]
+script = ExtResource("3_tx87k")
+text = "дядя"
+text_speed = 5.8
+metadata/_custom_type_script = "uid://c55w66ctnstua"
+
+[sub_resource type="Resource" id="Resource_tf1jc"]
+script = ExtResource("3_tx87k")
+text = "ляляляля"
+metadata/_custom_type_script = "uid://c55w66ctnstua"
+
+[node name="Scene2" type="Node2D" unique_id=567094633]
+
+[node name="DialogueArea2D" parent="." unique_id=1449093265 instance=ExtResource("1_nev6h")]
+activate_instant = true
+dialogue = Array[ExtResource("2_tf1jc")]([SubResource("Resource_nev6h"), SubResource("Resource_tf1jc")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=768721572]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1874775418]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextBox" parent="." unique_id=607516813 instance=ExtResource("1_tf1jc")]

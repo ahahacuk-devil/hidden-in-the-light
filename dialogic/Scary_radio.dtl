@@ -1,0 +1,36 @@
+[wait time="2.0"]
+audio -
+RADIO_GIRL: Они идут.
+join MAIN_GIRL_MIA left
+MAIN_GIRL_MIA: АЙ!
+RADIO_GIRL: Но не к тебе. Пока что нет. Но очень и очень скоро.
+RADIO_GIRL: Сначала будет твой брат. Он будет защищать тебя до последнего, не так ли? Ах, эта связь осиротевших детей. Как трогательно!
+RADIO_GIRL: Скажи мне, Мия, что ты будешь делать без Джейка? Расскажешь друзьям, семье, полиции? Как жаль, что тебе никто не поверит.
+MAIN_GIRL_MIA: ХВАТИТ!
+RADIO_GIRL: Мы заберем тебя туда, откуда выхода нет. Ты отплатишь сполна за грехи своих родителей. За грехи своего брата.
+MAIN_GIRL_MIA: Умоляю, хватит!
+RADIO_GIRL: Ты пожалеешь о том, что не умерла раньше.
+MAIN_GIRL_MIA: . . .
+[wait time="1.1" hide_text="false"]
+join MAIN_GIRL_MIA (MIA) left
+MAIN_GIRL_MIA: Что это было?!
+MAIN_GIRL_MIA: Брату будет больно? Он уйдет? Уйдет как родители?
+MAIN_GIRL_MIA: я-
+MAIN_GIRL_MIA: Нет!
+MAIN_GIRL_MIA: НЕ ХОЧУ!
+MAIN_GIRL_MIA: Мне нужно пойти к Джейку, я не могу БРОСИТЬ ЕГО!
+leave MAIN_GIRL_MIA
+[background arg="#000000ff" fade="0.0"]
+[wait time="1.0"]
+audio "res://dialogic/keys-dropped-on-floor_zyokgpeo1.mp3"
+[wait time="1.0"]
+MAIN_GIRL_MIA: ...Что это?
+MAIN_GIRL_MIA: Ключ?
+MAIN_GIRL_MIA: Он похож на наш!
+[wait time="1.5"]
+audio "res://dialogic/343003db0b913cf_DogIP2O1.mp3"
+[wait time="5.1"]
+audio "res://dialogic/zvuk-svjazki-kljuchej.mp3"
+[wait time="4.8" hide_text="false"]
+MAIN_GIRL_MIA: Братик, мне очень страшно...
+[signal arg="home_to_world"]

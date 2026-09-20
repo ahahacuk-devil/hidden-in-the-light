@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://diifi8tr1eoq7"]
+
+[ext_resource type="Script" uid="uid://dmr82t844ddp4" path="res://texturi/radio.gd" id="1_gkh6s"]
+[ext_resource type="Texture2D" uid="uid://ct68le0xg1cn1" path="res://Pixel_Paradise_Interiors_Demo/Windows/TopDownHouse_SmallItems.png" id="1_s7bqt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7bqt"]
+atlas = ExtResource("1_s7bqt")
+region = Rect2(114.100075, 50.33395, 13.899925, 14.4508095)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7bqt"]
+radius = 14.0
+height = 74.0
+
+[node name="radio" type="Node2D" unique_id=1673217528]
+script = ExtResource("1_gkh6s")
+
+[node name="Sprite2D" type="Area2D" parent="." unique_id=1762084265]
+position = Vector2(23, 9)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=2086400877]
+texture = SubResource("AtlasTexture_s7bqt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1948829531]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_s7bqt")
+
+[connection signal="body_entered" from="Sprite2D" to="." method="_on_sprite_2d_body_entered"]
+[connection signal="body_exited" from="Sprite2D" to="." method="_on_sprite_2d_body_exited"]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cbkwnrvqv4cx2"]
+
+[ext_resource type="Texture2D" uid="uid://ct68le0xg1cn1" path="res://Pixel_Paradise_Interiors_Demo/Windows/TopDownHouse_SmallItems.png" id="1_1yd4h"]
+[ext_resource type="Script" uid="uid://el0md8gpbybr" path="res://texturi/latter.gd" id="1_58fkk"]
+[ext_resource type="PackedScene" uid="uid://vxogrdw7ub1l" path="res://dialogic/dialogicABSOLUTE.tscn" id="3_ryouj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58fkk"]
+atlas = ExtResource("1_1yd4h")
+region = Rect2(33.99161, 20.515728, 12.146, 11.674969)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yd4h"]
+size = Vector2(48, 20)
+
+[node name="Latter" type="Node2D" unique_id=175904366]
+script = ExtResource("1_58fkk")
+
+[node name="Sprite2D" type="Area2D" parent="." unique_id=956566995]
+position = Vector2(23, 9)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=1877239595]
+texture = SubResource("AtlasTexture_58fkk")
+
+[node name="Collision_later" type="CollisionShape2D" parent="Sprite2D" unique_id=830811780]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_1yd4h")
+
+[node name="dialogic" parent="." unique_id=1768872819 instance=ExtResource("3_ryouj")]
+
+[connection signal="body_entered" from="Sprite2D" to="." method="_on_sprite_2d_body_entered"]
+[connection signal="body_exited" from="Sprite2D" to="." method="_on_sprite_2d_body_exited"]

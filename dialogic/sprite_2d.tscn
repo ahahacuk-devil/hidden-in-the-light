@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dubogddkoe0n6"]
+
+[ext_resource type="Texture2D" uid="uid://d4b0odski7tqb" path="res://dialogic/channels4_profile(1).png" id="1_xnx53"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=81807642]
+texture_repeat = 2
+scale = Vector2(924, 134)
+texture = ExtResource("1_xnx53")
+region_enabled = true
